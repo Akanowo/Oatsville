@@ -1,1 +1,357 @@
 /* You can add global styles to this file, and also import other style files */
+/* @font-face {
+    font-family: "Proxima Nova";
+    src: url("/assets/Proxima\ Nova\ Alt\ Light.otf");
+    src: url("/assets/Proxima\ Nova\ Alt\ Thin.otf");
+    src: url("/assets/Proxima\ Nova\ Bold.otf");
+
+    src: 
+    url("/assets/Proxima\ Nova\ Thin.otf") format("woff"),
+    url("/assets/Proxima\ Nova\ Alt\ Light.otf") format("opentype"),
+    url("/assets/Proxima\ Nova\ Thin.otf") format("opentype"),
+
+} */
+
+*{
+  font-family: 'DM sans', sans-serif;
+}
+
+body{
+  /* background: #1A1A1A; */
+  background: #191919;
+
+}
+
+/* NAVBAR */
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+  color: #F2D39A;
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.5);
+  border-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,.5);
+  margin-left: 1.8rem;
+}
+
+#home{
+  margin-top: 100px;
+}
+
+
+.oat_head_text{
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 77px;
+  text-align: center;
+  color: #EEEEEE;
+ text-transform: uppercase;
+ width: 70%;
+ font-variant: small-caps;
+ margin: 0 auto;
+}
+
+.oat_heading_border{
+  border-bottom: 2px solid #F2D39A;
+}
+
+.oat_head_text_second{
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  color: #ACACAC;
+  font-weight: 300;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/*  ABOUT */
+section.about {
+  background: #E5E5E5;
+  padding: 5rem;
+}
+
+.about h4{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1F2B45;
+}
+
+.about p{
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #353535;
+}
+
+.about img{
+  width: auto;
+}
+
+button.btn.btn_learn_more {
+  background: #F1CAB3;
+  border-radius: 4px;
+  padding: .5rem 2.5rem;
+}
+
+/*  PRODUCT */
+.product{
+  padding: 5rem 0;
+}
+
+.product_text h4{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FEFEFE;
+}
+
+.product_text p{
+  color: #C6C6C6;
+  font-size: 20px;
+  line-height: 33px;
+}
+
+.product_item {
+  display: flex;
+}
+
+.product_item h5{
+  color: #fff;
+  font-weight: 700;
+  font-size: 25px;
+  padding-top: 1rem;
+}
+
+.product_item sub{
+  color: #1F2B45;
+}
+
+.product_item .brown{
+  color: #F2D39A;
+}
+
+.product_item_one {
+  background: #191919;
+  padding: 2rem;
+}
+
+.product_item_two {
+  background: #F1D0A7;
+  padding: 2rem;
+}
+
+.product_item_three {
+  background: #A56037;
+  padding: 2rem;
+}
+
+.product_item_four {
+  background: #D89441;
+  padding: 2rem;
+}
+
+.product_item_image{
+  width: 100%;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  display: flex;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.form-control{
+  padding: 1.5em 2.5rem;
+  line-height: 1.5;
+  margin-right: .8rem;
+}
+
+/* FOOTER */
+.socials img{
+  width: auto;
+  margin: 20px;
+}
+
+.social_links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social_links li a {
+  margin: 10px;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: #1C1C1C;
+}
+
+#copyright, #copyright a{
+  font-size: 15px;
+  line-height: 20px;
+  font-variant: small-caps;
+  color: #B6B6B6;
+  margin-top: 20px;
+}
+
+
+/* ==================CONTACT PAGE================================== */
+#home_back{
+  background-image: url(/assets/back.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.contact h1{
+  padding-top: 500px;
+  text-transform: uppercase;
+}
+
+.contact_right{
+  margin-top: 6rem;
+  margin-left: 6rem;
+  position: relative;
+  z-index: 1000;
+}
+
+.contact_input{
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #000;
+  padding: .1rem;
+}
+
+.contact_input::placeholder{
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #262626;
+  padding-bottom: 1rem;
+}
+
+.contact_form {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 2rem;
+  padding-bottom: 6rem;
+}
+
+.contact_form h6{
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.contact_adress h6{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.contact_form .form-group{
+  margin-bottom: 4rem;
+}
+
+.contact_links a{
+  color: #191919;
+  font-size: 18px;
+}
+
+.address{
+  font-size: 18px;
+}
+
+.feedback{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media (max-width: 768px){
+
+  .navbar-toggler {
+      padding: 0;
+      font-size: 1.25rem;
+      line-height: 1;
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: .25rem;
+  }
+
+  #home {
+      margin-top: 50px;
+  }
+  .col-lg-12.oat_home.text-center {
+      padding: 0;
+  }
+  .oat_head_text {
+      font-size: 35px;
+      line-height: 47px;
+      width: 100%;
+  }
+  .oat_head_text_second {
+      font-size: 20px;
+      line-height: 33px;
+      width: 100%;
+  }
+  section.about {
+      padding: 3rem .5rem;
+  }
+  .newsletter {
+      display: flex;
+      width: 100%;
+      margin: 2rem auto;
+  }
+  button#subscribe {
+      padding: .5rem 1rem;
+  }
+  .form-control {
+      padding: 1.5em 2rem;
+      line-height: 1.5;
+      margin-right: .5rem;
+  }
+  .product_item {
+      display: flex;
+      flex-direction: column;
+  }
+  .made_product img {
+      width: 100%;
+  }
+  .contact h1 {
+      padding-top: 20px !important;
+  }
+
+  .contact_right {
+      margin-top: 2rem;
+      margin-left: 0;
+      z-index: 1000;
+  }
+
+  .contact_input {
+      border: none;
+      border-radius: 0;
+      border-bottom: 2px solid #000;
+      padding: .1rem;
+  }
+
+  .contact_form .form-group {
+      margin-bottom: 2rem;
+  }
+  .upload{
+      padding-bottom: 1rem;
+  }
+
+  .row.contact_adress {
+      /* margin-top: 5rem; */
+      padding: 1rem;
+  }
+}
