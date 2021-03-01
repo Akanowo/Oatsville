@@ -1,0 +1,58 @@
+.rotate {
+  transform: rotate(90deg);
+}
+
+.head_image label {
+  margin-top: 20px;
+}
+
+#landing_oat_img {
+  width: 40%;
+  margin-bottom: 60px;
+}
+
+.ellipse-shadow {
+  position: absolute;
+  width: 500px;
+  height: 33px;
+  left: 30%;
+  bottom: 2%;
+  background: rgba(242, 211, 154, 0.22);
+  filter: blur(50px);
+}
+
+#imgContainer {
+  margin-top: 55px;
+}
+
+#imgContainer img {
+  width: 100%;
+}
+
+@media(max-width: 576px) {
+  #landing_oat_img {
+    width: 75%;
+    margin-top: 15px;
+  }
+
+  .ellipse-shadow {
+    width: 300px;
+    left: 10%;
+  }
+}
+
+#productFactory {
+  background-color: rgb(165, 96, 55);
+}
+
+#productFactory h4 {
+  color: #fff;
+}
+
+#productFactory p {
+  color: rgb(242, 211, 154) !important;
+}
+
+.logo_container img {
+  width: 20%;
+}

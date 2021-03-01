@@ -1,0 +1,56 @@
+<div class="container">
+  <app-navbar></app-navbar>
+
+  <section class="product_row mt-5" [@flip1]>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 product_list_left">
+          <h1>Oatville Product</h1>
+          <p>Our Genetically modified organism product is the best oat product to purchase for both the young and old.</p>
+        </div>
+        <div class="col-lg-6 product_list_right ml-auto">
+          <img class="shake-slow" src="assets/oatsville/last 1.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<section class="about">
+  <div class=" text-center">
+    <div class="about">
+      <h4>Oatsville Categories</h4>
+      <p>Oatsville offers you two categories, get our product today and follow the instructions on how to make them.</p>
+
+    </div>
+
+    <div class="row mt-5 mb-2">
+      <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let product of products" data-aos="fade" data-aos-duration="2500">
+        <div class="product_items">
+          <img [src]="product.imgUrl" alt="">
+          <h4 class="shake-chunk">{{product.name}}</h4>
+          <button class="btn btn_learn_more mt-3" (click)="displayModalData()">see more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+
+<ngx-smart-modal identifier="categoryDetailsModal">
+    <style>
+        .feature_text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nsm-dialog {
+            top: 50%
+        }
+    </style>
+    <div class="feature_text">
+        <p>This feature is coming soon</p>
+    </div>
+</ngx-smart-modal>

@@ -1,0 +1,21 @@
+<section class="" [hidden] = "hidden">
+  <div class=" text-center">
+    <div class="product_item">
+      <div class="product_item_box" [ngStyle]="{'background': product.backgroundColor}"
+        *ngFor="let product of productList" data-aos="fade" data-aos-duration="2500">
+        <img class="product_item_image" src={{product.imageUrl}} alt="">
+        <h5>{{product.name}}</h5>
+        <sub class="brown" [ngStyle]="{'color': product.id === 2 ? '#353535' : '#F2D39A'}">VIEW RECIPE</sub>
+        <div class="pt-3">
+          <!-- Rounded switch -->
+          <label class="switch">
+            <input type="checkbox" (change)="openProductDetails(product.id)">
+            <span class="slider round" [ngStyle]="{'border': product.id === 2 ? '1px solid #353535' : '1px solid #F2D39A'}"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-product-details [hidden] = "!hidden" [productId] = "selectedProductId" (hideDetails)="hideDetails($event)"></app-product-details>

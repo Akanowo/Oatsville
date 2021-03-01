@@ -1,0 +1,14 @@
+input:focus {
+  outline: none !important;
+  border: none;
+  border-bottom: 1px#F2D39A;
+  transition: .4s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgb(141, 141, 141);
+}
+
+#send_btn_container  {
+  text-align: center;
+}
