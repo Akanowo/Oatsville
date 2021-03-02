@@ -12,3 +12,9 @@ input::placeholder, textarea::placeholder {
 #send_btn_container  {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .contact_adress .col-lg-6 {
+    margin-bottom: 30px;
+  }
+}
