@@ -3,6 +3,10 @@
   font-size: 28px !important;
 }
 
+.product_items img {
+  width: 30%;
+}
+
 
 @media(max-width: 768px) {
 
@@ -13,6 +17,11 @@
   .product_list_left {
     margin-bottom: 40px;
   }
+
+  .product_items img {
+    width: 40%;
+  }
+  
 }
 
 
@@ -22,4 +31,9 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .product_items img {
+    width: 35%;
+  }
+  
 }

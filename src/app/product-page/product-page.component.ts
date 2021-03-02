@@ -22,12 +22,12 @@ export class ProductPageComponent implements OnInit {
     {
       id: 1,
       name: 'Oatsville Old Fashion',
-      imgUrl: 'assets/oatsville/oat2-rrr 1.png'
+      imgUrl: 'assets/oatsville/oat-2-r.png'
     },
     {
       id: 2,
       name: 'Oatsville Quick Oats',
-      imgUrl: 'assets/oatsville/oat1-1 2.png'
+      imgUrl: 'assets/oatsville/oat1-1111.png'
     }
   ]
 
