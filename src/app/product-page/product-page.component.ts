@@ -34,13 +34,12 @@ export class ProductPageComponent implements OnInit {
   constructor(private ngModal: NgxSmartModalService) { }
 
 
-  displayModalData() {
-    // const modal = this.products.find((x) => x.id === id);
-    // this.ngModal.setModalData({
-    //   name: modal.name,
-    //   imgUrl: modal.imgUrl
-    // }, 'detailsModal')
-    this.ngModal.open('categoryDetailsModal')
+  displayModal1() {
+    this.ngModal.open(`categoryDetailsModal1`)
+  }
+  
+  displayModal2() {
+    this.ngModal.open(`categoryDetailsModal2`)
   }
 
   ngOnInit(): void {

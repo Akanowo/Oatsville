@@ -26,11 +26,18 @@
     </div>
 
     <div class="row mt-5 mb-2">
-      <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let product of products" data-aos="fade" data-aos-duration="2500">
+      <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade" data-aos-duration="2500">
         <div class="product_items">
-          <img [src]="product.imgUrl" alt="">
-          <h4 class="shake-chunk">{{product.name}}</h4>
-          <button class="btn btn_learn_more mt-3" (click)="displayModalData()">see more</button>
+          <img src="assets/oatsville/oat-2-r.png" alt="product image">
+          <h4 class="shake-chunk">Oatsville Old Fashion</h4>
+          <button class="btn btn_learn_more mt-3" (click)="displayModal1()">see more</button>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade" data-aos-duration="2500">
+        <div class="product_items">
+          <img src="assets/oatsville/oat1-1111.png" alt="">
+          <h4 class="shake-chunk">Oatsville Quick Oats</h4>
+          <button class="btn btn_learn_more mt-3" (click)="displayModal2()">see more</button>
         </div>
       </div>
     </div>
@@ -39,7 +46,7 @@
 
 <app-footer></app-footer>
 
-<ngx-smart-modal identifier="categoryDetailsModal">
+<ngx-smart-modal identifier="categoryDetailsModal1">
     <style>
         .feature_text {
             display: flex;
@@ -49,8 +56,282 @@
         .nsm-dialog {
             top: 50%
         }
+        .sub_contents {
+          margin-left: 20px;
+        }
+
+        .d-flex {
+          justify-content: space-between;
+        }
+
+        .recipie_container {
+          border: 1px solid #ccc;
+          padding: 20px;
+        }
+
+        .recipie_header h2 {
+          border-bottom: 1px solid #999;
+        }
+
+        .recipie_header .d-flex, .sub_header, .recipie_contents_top, .recipie_middle {
+          border-bottom: 2px solid #000;
+          margin-bottom: 15px;
+        }
+
+        #daily_value {
+          justify-content: flex-end;
+        }
+
+        .ingredient {
+          margin-top: 15px;
+        }
+
+        .ingredient h3 {
+          text-transform: uppercase;
+        }
     </style>
-    <div class="feature_text">
-        <p>This feature is coming soon</p>
+    <div class="recipie_container">
+      <div class="recipie_header">
+        <h2>Nutrition Facts</h2>
+        <p>About 30 servings per container</p>
+        <div class="d-flex">
+          <h5>Serving size</h5>
+          <h5>1/2 cup dry (40g)</h5>
+        </div>
+      </div>
+      <div class="sub_header">
+        <h6>Amount Per Serving</h6>
+        <div class="d-flex">
+          <h4>Calories</h4>
+          <h4>150</h4>
+        </div>
+      </div>
+      <div class="recipie_contents">
+        <div class="recipie_contents_top">
+          <div class="d-flex" id="daily_value">
+            <p>% Daily Value</p>
+          </div>
+          <div id="fat">
+            <div class="d-flex">
+              <p><b>Total Fat</b> 2.5g</p>
+              <p>3%</p>
+            </div>
+            <div class="sub_contents">
+              <div class="d-flex">
+                <p>Saturated Fat 0.5g</p>
+                <p>0%</p>
+              </div>
+              <p>Trans Fat 0g</p>
+              <p>Polyunsaturated Fat 1g</p>
+              <p>Monounsaturated Fat 1g</p>
+            </div>
+          </div>
+          <div id="cholesterol">
+            <div class="d-flex">
+              <p><b>Cholesterol</b> 0mg</p>
+              <p>0%</p>
+            </div>
+          </div>
+          <div class="d-flex" id="sodium">
+            <p><b>Sodium</b> 0mg</p>
+            <p>0%</p>
+          </div>
+          <div id="carb">
+            <div class="d-flex">
+              <p><b>Total Carbohydrate</b> 27g</p>
+              <p>10%</p>
+            </div>
+            <div class="sub_contents">
+              <div class="d-flex">
+                <p>Dietary Fiber 4g</p>
+                <p>14%</p>
+              </div>
+              <p>Soluble Fiber 2g</p>
+              <p>Insoluble Fiber 2g</p>
+              <p>Total Sugars < 1g</p>
+              <div class="sub_contents">
+                <div class="d-flex">
+                  <p>Includes 0g Added Sugars</p>
+                  <p>0%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex" id="protein">
+            <p><b>Protein</b> 5g</p>
+            <p>10%</p>
+          </div>
+        </div>
+        <div class="recipie_middle">
+          <div class="d-flex">
+            <p>Vitamin D 0mcg</p>
+            <p>0%</p>
+          </div>
+          <div class="d-flex">
+            <p>Calcium 0mcg</p>
+            <p>0%</p>
+          </div>
+          <div class="d-flex">
+            <p>Iron 1.4mg</p>
+            <p>8%</p>
+          </div>
+          <div class="d-flex">
+            <p>Potassium 127mg</p>
+            <p>2%</p>
+          </div>
+        </div>
+        <div class="recipie_bottom_note">
+          <p>* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet 2,000 calories a day is used for general nutrition advice.</p>
+        </div>
+      </div>
     </div>
+    <div class="ingredient">
+      <h3>Ingredients</h3>
+      <p>Whole Grain Rolled Oats</p>
+    </div>
+</ngx-smart-modal>
+
+<ngx-smart-modal identifier="categoryDetailsModal2">
+  <style>
+      .feature_text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .nsm-dialog {
+          top: 50%
+      }
+      .sub_contents {
+        margin-left: 20px;
+      }
+
+      .d-flex {
+        justify-content: space-between;
+      }
+
+      .recipie_container {
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+
+      .recipie_header h2 {
+        border-bottom: 1px solid #999;
+      }
+
+      .recipie_header .d-flex, .sub_header, .recipie_contents_top, .recipie_middle {
+        border-bottom: 2px solid #000;
+        margin-bottom: 15px;
+      }
+
+      #daily_value {
+        justify-content: flex-end;
+      }
+
+      .ingredient {
+        margin-top: 15px;
+      }
+
+      .ingredient h3 {
+        text-transform: uppercase;
+      }
+  </style>
+  <div class="recipie_container">
+    <div class="recipie_header">
+      <h2>Nutrition Facts</h2>
+      <p>About 30 servings per container</p>
+      <div class="d-flex">
+        <h5>Serving size</h5>
+        <h5>1/2 cup dry (40g)</h5>
+      </div>
+    </div>
+    <div class="sub_header">
+      <h6>Amount Per Serving</h6>
+      <div class="d-flex">
+        <h4>Calories</h4>
+        <h4>150</h4>
+      </div>
+    </div>
+    <div class="recipie_contents">
+      <div class="recipie_contents_top">
+        <div class="d-flex" id="daily_value">
+          <p>% Daily Value</p>
+        </div>
+        <div id="fat">
+          <div class="d-flex">
+            <p><b>Total Fat</b> 2.5g</p>
+            <p>3%</p>
+          </div>
+          <div class="sub_contents">
+            <div class="d-flex">
+              <p>Saturated Fat 0g</p>
+              <p>0%</p>
+            </div>
+            <p>Trans Fat 0g</p>
+            <p>Polyunsaturated Fat 1g</p>
+            <p>Monounsaturated Fat 1g</p>
+          </div>
+        </div>
+        <div id="cholesterol">
+          <div class="d-flex">
+            <p><b>Cholesterol</b> 0mg</p>
+            <p>0%</p>
+          </div>
+        </div>
+        <div class="d-flex" id="sodium">
+          <p><b>Sodium</b> 0mg</p>
+          <p>0%</p>
+        </div>
+        <div id="carb">
+          <div class="d-flex">
+            <p><b>Total Carbohydrate</b> 27g</p>
+            <p>10%</p>
+          </div>
+          <div class="sub_contents">
+            <div class="d-flex">
+              <p>Dietary Fiber 4g</p>
+              <p>14%</p>
+            </div>
+            <p>Soluble Fiber 2g</p>
+            <p>Insoluble Fiber 2g</p>
+            <p>Total Sugars < 1g</p>
+            <div class="sub_contents">
+              <div class="d-flex">
+                <p>Includes 0g Added Sugars</p>
+                <p>0%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex" id="protein">
+          <p><b>Protein</b> 5g</p>
+          <p>10%</p>
+        </div>
+      </div>
+      <div class="recipie_middle">
+        <div class="d-flex">
+          <p>Vitamin D 0mcg</p>
+          <p>0%</p>
+        </div>
+        <div class="d-flex">
+          <p>Calcium 0mcg</p>
+          <p>0%</p>
+        </div>
+        <div class="d-flex">
+          <p>Iron 1.4mg</p>
+          <p>8%</p>
+        </div>
+        <div class="d-flex">
+          <p>Potassium 127mg</p>
+          <p>2%</p>
+        </div>
+      </div>
+      <div class="recipie_bottom_note">
+        <p>* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet 2,000 calories a day is used for general nutrition advice.</p>
+      </div>
+    </div>
+  </div>
+  <div class="ingredient">
+    <h3>Ingredients</h3>
+    <p>Whole Grain Rolled Oats</p>
+  </div>
 </ngx-smart-modal>
